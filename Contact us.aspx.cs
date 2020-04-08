@@ -11,7 +11,17 @@ namespace sample_placement_cell
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                Label1.ForeColor = System.Drawing.Color.Green;
+                Label1.Text = "Comment Saved Successfully";
+            }
         }
     }
 }
